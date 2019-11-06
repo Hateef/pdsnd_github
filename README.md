@@ -1,15 +1,5 @@
-### Date created
-Include the date you created this project and README file.
+### Explore US Bikeshare Data by Python
+Udacity Programming for Data Science Nanodegree program - Project II
 
-### Project Title
-Replace the Project Title
-
-### Description
-Describe what your project is about and what it does
-
-### Files used
-Include the files used
-
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+### Overview
+In this project, using Python to explore data related to Bikeshare systems for three major cities in the US: Chicago, New York City, and Washington. this code import the data and answer interesting questions about it by computing descriptive statistics. also, I have written a script that takes in raw input from the user to create an interactive experience in the terminal to present these statistics.
