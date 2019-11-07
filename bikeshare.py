@@ -66,7 +66,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    
+
     #load data file into a dataframe:
     df = pd.read_csv(CITY_DATA[city])
 
@@ -107,13 +107,10 @@ def time_stats(df):
     popular_month = df['month'].mode()[0]
     print('Most Common Month:', popular_month)
 
-
     # TO DO: display the most common day of week
 
     popular_day = df['day_of_week'].mode()[0]
     print('Most Common day:', popular_day)
-
-
 
     # TO DO: display the most common start hour
 
@@ -137,12 +134,10 @@ def station_stats(df):
     Start_Station = df['Start Station'].mode()[0]
     print('Most Commonly used start station:', Start_Station)
 
-
     # TO DO: display most commonly used end station
 
     End_Station = df['End Station'].mode()[0]
     print('\nMost Commonly used end station:', End_Station)
-
 
     # TO DO: display most frequent combination of start station and end station trip
 
@@ -173,7 +168,6 @@ def trip_duration_stats(df):
     seconds = time_1
     print('\nTotal travel time is {} days {} hours {} minutes {} seconds'.format(day, hour, minutes, seconds))
 
-
     # TO DO: display mean travel time
 
     mean_travel_time = df['Trip Duration'].mean()
@@ -186,7 +180,6 @@ def trip_duration_stats(df):
     time_2 %= 60
     seconds_2 = time_2
     print('\nMean travel time is {} hours {} minutes {} seconds'.format(hour_2, minutes_2, seconds_2))
-
 
     # display descriptive statistics for trip duration
 
