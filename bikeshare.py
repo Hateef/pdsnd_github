@@ -17,8 +17,8 @@ def get_filters():
     """
 
     print('\nHello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
+    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
     while True:
       city = input("\nWhich city would you want to filter by? New York City, Chicago or Washington?\n").lower()
@@ -66,13 +66,14 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+    
     #load data file into a dataframe:
     df = pd.read_csv(CITY_DATA[city])
 
     #convert the Start Time column to datetime:
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     # to_datetime is used to convert date into date format
-    
+
     # extract month and day of week from Start Time to create new columns:
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
@@ -187,7 +188,7 @@ def trip_duration_stats(df):
     print('\nMean travel time is {} hours {} minutes {} seconds'.format(hour_2, minutes_2, seconds_2))
 
 
-    # display descriptive statistics for trip duration 
+    # display descriptive statistics for trip duration
 
     descriptive_trip_duration = df['Trip Duration'].describe()
     print('\nDescriptive Statistics: {}'.format(descriptive_trip_duration))
